@@ -1,8 +1,3 @@
-(function(){
-	document.getElementsByTagName('input')[0].focus();
-}())
-
-
 var submit = document.getElementById('submit');
 var elFoodEntry = document.getElementById('food');
 
