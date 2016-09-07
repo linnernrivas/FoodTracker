@@ -1,24 +1,27 @@
-var submit = document.getElementById('submit');
-var elFoodEntry = document.getElementById('food');
+$(function(){
+	var $submit = $('#submit');
+	var $food = $('#food');
+	var $foodList = $('#foodList');
+	var $foodEntry = $('#foodEntry');
+	var $warning = $('#warning');
 
-submit.addEventListener('click', function(e){
-	var foodToAdd = elFoodEntry.value;
-	addFood(foodToAdd);
+	$food.focus();
+	$warning.addClass('hidden');
 
-	elFoodEntry.value = '';
-
-	if(e.preventDefault){
+	$submit.on('click', function(e){
+		addFood();
 		e.preventDefault();
-	} else {
-		e.returnValue = false;
-	}
+		$food.val('');
+	});
+
+	function addFood(){
+		var $foodVal = $food.val();
+
+		if($foodVal !== ''){
+			$foodList.append('<li>' + $foodVal + '</li>');
+			$warning.removeClass('hidden');	
+		} else {
+			$warning.addClass('hidden');
+		}
+	};
 });
-
-function addFood(e){
-	var el = document.getElementById('foodList');
-	var newEl = document.createElement('li');
-	var newListItem = document.createTextNode(e);
-
-	newEl.appendChild(newListItem);
-	el.appendChild(newEl);
-}
