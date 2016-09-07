@@ -1,3 +1,25 @@
+/** {
+	border: 1px solid black;
+}
+*/
+header {
+	text-align: center;
+}
+
+#foodEntry {
+	margin: 0 auto;
+	text-align: center;
+	width: 80%;
+}
+
+#foodList {
+	list-style-position: inside;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	width: 80%;
+}
+
 #warning {
 	color: red;
 }

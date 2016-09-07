@@ -19,9 +19,9 @@ $(function(){
 
 		if($foodVal !== ''){
 			$foodList.append('<li>' + $foodVal + '</li>');
-			$warning.removeClass('hidden');	
+			$warning.addClass('hidden');	
 		} else {
-			$warning.addClass('hidden');
+			$warning.removeClass('hidden');
 		}
 	};
 });
